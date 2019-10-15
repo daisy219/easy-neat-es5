@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>课堂互动报告</title>
+  <link rel="stylesheet" href="./css/Select.css">
+  <link rel="stylesheet" href="./css/Loading.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/detail.css">
+  <link rel="stylesheet" type="text/css" href="./css/swipt.css"/>
+  <link rel="stylesheet" href="./css/photoswipe.css">
+  <link rel="stylesheet" href="./css/default-skin.css">
+</head>
+<body>
+  <div class="class_report">
+    <div class="header" style="display: none;">
+      <div class="common_contain">
+        <div class="fl">
+          <img src="./img/logo.png">
+        </div>
+        <div class="fl class_logo">
+          <img src="./img/title.png">
+        </div>
+      </div>
+    </div>
+    <!-- <iframe id="mainifame" style="border:none" width="100%" height="100%" src=""></iframe> -->
+    <div class="class_detail">
+      <div class="clearfix">
+        <p class="student_name fl"></p>
+        <div class="fl student_img">
+          <img src="./img/person.png" alt="学生">
+        </div>
+      </div>
+      <!-- 上半部分start -->
+      <div class="class_banner clearfix">
+        <!-- 上半部分左侧start -->
+        <div class="banner_left fl clearfix">
+          <div class="banner_left_inner" style="display: none;">
+            <div class="left_ask fl">
+              <p class="banner_title">教师提问</p>
+              <div class="clearfix">
+                <div class="asking_rate fl">
+                  <div class="pie_chart">
+                    <div class="pie_chart_inner">
+                      <p class="rate"><span class="rate_count askinRate">0</span>%</p>
+                    </div>
+                    <div class="clearfix">
+                      <div class="pie_chart_left fl">
+                        <div class="pie_chart_left_inner askinRate_left"></div>
+                      </div>
+                      <div class="pie_chart_right fr">
+                        <div class="pie_chart_right_inner askinRate_right"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="banner_dis">参与率</p>
+                </div>
+                <div class="asking_right_rate fl">
+                  <div class="pie_chart">
+                    <div class="pie_chart_inner">
+                      <p class="rate"><span class="rate_count askrightRate">0</span>%</p>
+                    </div>
+                    <div class="pie_chart_left fl">
+                      <div class="pie_chart_left_inner askrightRate_left"></div>
+                    </div>
+                    <div class="pie_chart_right fr">
+                      <div class="pie_chart_right_inner askrightRate_right"></div>
+                    </div>
+                  </div>
+                  <p class="banner_dis">正确率</p>
+                </div>
+              </div>
+            </div>
+            <div class="left_practise fl">
+              <p class="banner_title">课堂作业</p>
+              <div class="clearfix">
+                <div class=" asking_rate fl">
+                  <div class="pie_chart">
+                    <div class="pie_chart_inner">
+                      <p class="rate"><span class="rate_count testinRate">0</span>%</p>
+                    </div>
+                    <div class="pie_chart_left fl">
+                      <div class="pie_chart_left_inner testinRate_left"></div>
+                    </div>
+                    <div class="pie_chart_right fr">
+                      <div class="pie_chart_right_inner testinRate_right"></div>
+                    </div>
+                  </div>
+                  <p class="banner_dis">参与率</p>
+                </div>
+                <div class=" asking_right_rate fl">
+                  <div class="pie_chart">
+                    <div class="pie_chart_inner">
+                      <p class="rate"><span class="rate_count testrightRate">0</span>%</p>
+                    </div>
+                    <div class="pie_chart_left fl">
+                      <div class="pie_chart_left_inner testrightRate_left"></div>
+                    </div>
+                    <div class="pie_chart_right fr">
+                      <div class="pie_chart_right_inner testrightRate_right"></div>
+                    </div>
+                  </div>
+                  <p class="banner_dis">正确率</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="loading"></div>
+        </div>
+        <!-- 上半部分左侧end -->
+
+        <!-- 上半部分右侧start -->
+        <div class="banner_right fr">
+          <div class="banner_right_inner" style="display: none;">
+            <p class="banner_title">其他</p>
+            <div class="clearfix">
+              <div class="fl banner_right_item">
+                <div class="count after_line"><span class="count_span randaskCount">0</span>次</div>
+                <p class="banner_dis">随机问答</p>
+              </div>
+              <div class="fl banner_right_item">
+                <div class="count after_line"><span class="count_span ratingCount">0</span>次</div>
+                <p class="banner_dis">抢答</p>
+              </div>
+              <div class="fl banner_right_item">
+                <div class="count"><span class="count_span demoCount">0</span>次</div>
+                <p class="banner_dis">学生示范</p>
+              </div>
+            </div>
+          </div>
+          <div class="loading"></div>
+        </div>
+        <!-- 上半部分右侧end -->
+      </div>
+      <!-- 上半部分end -->
+
+      <!-- 下半部分start -->
+      <ul class="common_main_menu">
+          <li onclick="change_tab('ask')">教师提问</li>
+          <li class="active" onclick="change_tab('practise')">课堂作业</li>
+      </ul>
+
+      <div class="ask_page" style="display: none;">
+        <div class="ask_page_have_data"></div>
+        <div class="ask_page_no_data no_data">
+          <img src="./img/no_data.png">
+        </div>
+      </div>
+      <div class="practise_page">
+        <div class="practise_page_have_data">
+          <div class="practise_search">
+            <select>
+            </select>
+          </div>
+          <div class="practise_main clearfix">
+            <div class="practise_main_left fl">
+
+                <div class="pb-carouselWarp swipt">
+                  <ul class="pb-carousel">
+                  </ul>
+                  <ul class="pb-carousel-ind">
+                  </ul>
+                  <button class="pb-arrow pb-arrow-prev"></button>
+                  <button class="pb-arrow pb-arrow-next" id="aa"></button>
+                </div>
+
+
+            </div>
+            <div class="practise_main_right fr">
+              <div class="practise_main_right_title clearfix">
+                <span class="text_overflow practise_main_right_student"></span>
+                <span>共计 <strong class="practise_main_right_strong"></strong> 题</span>
+                <span>得分 <strong class="practise_main_right_score"></strong> 分</span>
+              </div>
+
+              <div class="main_right_content">
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="practise_page_no_data no_data">
+          <img src="./img/no_data.png">
+        </div>
+      </div>
+      <!-- 下半部分end -->
+    </div>
+
+    <div class="footer">
+      <p>
+        <span class="copyright">Copyright © 2009 - <span class="date_now">2019</span> Edutech, Inc. All rights reserved.</span>
+        <span>版权所有：上海易教信息科技有限公司</span>
+        <a class="to_edu" href="http://www.educationtek.com/" target="_blank">www.educationtek.com</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- 轮播图大图 -->
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe.
+        It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg">
+    </div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+      <div class="pswp__container">
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+          <div class="pswp__item"></div>
+      </div>
+      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+      <div class="pswp__ui pswp__ui--hidden">
+          <div class="pswp__top-bar">
+              <!--  Controls are self-explanatory. Order can be changed. -->
+              <div class="pswp__counter">
+              </div>
+              <button class="pswp__button pswp__button--close" title="关闭图片"></button>
+              <button class="pswp__button pswp__button--fs" title="切换全屏"></button>
+              <button class="pswp__button pswp__button--zoom" title="缩放图片"></button>
+
+              <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+              <!-- element will get class pswp__preloader--active when preloader is running -->
+              <div class="pswp__preloader">
+                <div class="pswp__preloader__icn">
+                <div class="pswp__preloader__cut">
+                  <div class="pswp__preloader__donut"></div>
+                </div>
+                </div>
+              </div>
+              <!-- <button class="pswp__button pswp__button--delete" title="delete">
+                  <i class="weui-icon-delete weui-icon_gallery-delete"></i>
+              </button> -->
+          </div>
+          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+              <div class="pswp__share-tooltip"></div>
+          </div>
+          <button class="pswp__button pswp__button--arrow--left" title="上一张 (←)"></button>
+          <button class="pswp__button pswp__button--arrow--right" title="下一张 (→)"></button>
+
+          <div class="pswp__caption">
+              <div class="pswp__caption__center"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="./js/jQuery.js"></script>
+<script src="./js/Select.js"></script>
+<script src="./js/Loading.js"></script>
+<script src="./js/swipt.js"></script>
+<script src="./js/MAIN_CONFIG.js"></script>
+<script src="./js/photoswipe.min.js"></script>
+<script src="./js/photoswipe-ui-default.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/detail.js"></script>
+</html>

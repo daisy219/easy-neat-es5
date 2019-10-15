@@ -1,0 +1,226 @@
+html,body,p,ul,li,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+h1,h2,h3,h4,h5,h6{
+  /* font-size: 100%; */
+  font-weight: normal;
+}
+ul, li{
+  list-style: none;
+}
+html {
+  box-sizing: border-box;
+}
+button,input,select,textarea{
+  margin: 0;
+}
+.clearfix:after{
+  display: block;
+  content: ".";
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.fl{
+  float: left;
+}
+.fr {
+  float: right;
+}
+.text_overflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.common_contain {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.class_report {
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
+}
+
+/* 头部 */
+.class_report .header {
+  height: 70px;
+  border-bottom: 1px solid #E1E1E1;
+  padding-top: 20px;
+  min-width: 1200px;
+}
+.class_report .header .class_logo {
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+/* 主内容 */
+.class_report .main {
+  width: 100%;
+  min-width: 1200px;
+  min-height: 800px;
+  background: url('../img/background.png') no-repeat;
+  background-size: cover;
+}
+.class_report .main .report_list {
+  padding-top: 20px;
+}
+.class_report .main .report_list .report_item {
+  width: 282px;
+  height: 250px;
+  margin-right: 20px;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+.class_report .main .report_list .report_item:nth-child(4n) {
+  margin-right: 0;
+}
+.class_report .main .report_list .report_item .subject {
+  height: 32px;
+  font-size: 16px;
+  color: #595959;
+  background-color: #F5F5F5;
+  padding-left: 16px;
+  line-height: 32px;
+}
+.class_report .main .report_list .report_item .subject p {
+  max-width: 260px;
+}
+.class_report .main .report_list .report_item .content {
+  height: 136px;
+  background: url('../img/default.png') no-repeat 0 0;
+  background-size: cover;
+  border-bottom: 1px solid #E1E1E1;
+  text-align: center;
+  line-height: 136px;
+  color: #333333;
+  font-size: 20px;
+  cursor: pointer;
+}
+.class_report .main .report_list .report_item .content p {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.class_report .main .report_list .report_item .info {
+  padding: 10px 16px 0;
+  font-size: 16px;
+  line-height: 30px;
+  color: #595959;
+  /* padding-top: 10px; */
+  height: 70px;
+  background-color: #fff;
+}
+.class_report .main .report_list .report_item .info .time {
+  font-size: 14px;
+  color: #999999;
+  margin-left: 6px;
+  float: left;
+}
+.class_report .main .pagination_wrap {
+  padding-bottom: 110px;
+  text-align: right;
+}
+.class_report .main .pagination_wrap #pagination {
+  float: right;
+  margin: 0 8px;
+}
+.class_report .main .pagination_wrap #pagination .ui-page {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #666666;
+  background-color: #fff;
+}
+.class_report .main .pagination_wrap #pagination .ui-page-current {
+  background-color: #26BF80;
+  border-color: #26BF80;
+  color: #fff;
+}
+.class_report .main .pagination_wrap .fast_page {
+  width: 48px;
+  height: 28px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  color: #666666;
+  line-height: 28px;
+  text-align: center;
+  float: right;
+  cursor: pointer;
+  background-color: #fff;
+}
+.class_report .main .pagination_wrap .total {
+  margin-right: 16px;
+  line-height: 28px;
+  font-size: 12px;
+  color: #666666;
+}
+.class_report .main .pagination_wrap .jump_to {
+  float: right;
+  font-size: 12px;
+  line-height: 28px;
+  margin-left: 16px;
+  color: #666;
+}
+.class_report .main .pagination_wrap .jump_to input {
+  width: 32px;
+  height: 28px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  text-align: center;
+  color: #666;
+}
+.class_report .main .pagination_wrap .jump_to input:focus {
+  outline: none;
+  border-color: #26BF80;
+}
+
+/* 无数据 */
+.class_report .main .no_data {
+  text-align: center;
+  padding-top: 200px;
+}
+
+
+
+/* 底部 */
+.class_report .footer {
+  min-width: 1200px;
+  text-align: center;
+  /* position: absolute;
+  bottom: 0;
+  left: 0; */
+  width: 100%;
+  height: 40px;
+  background-color: #FAFAFA;
+  color: #999999;
+  font-size: 12px;
+  line-height: 40px;
+  border-top: 1px solid #E1E1E1;
+}
+.class_report .footer .copyright {
+  margin-right: 114px;
+}
+.class_report .footer .to_edu {
+  color: #26BF80;
+}
+.loading {
+  height: 100%;
+}
+.loading .ui-loading-icon::before {
+  background-color: #26BF80;
+}
+.loading .ui-loading-icon::after {
+  background: linear-gradient(to top, #26BF80, transparent 90%);
+}
